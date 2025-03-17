@@ -1,0 +1,280 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+   background: black;
+}
+
+h1{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #00FFEA;
+   letter-spacing: 20px;
+   font-size: 60px;
+}
+ 
+ p{
+    letter-spacing: 5px;
+    color: #2F09F8;
+    font-size: 20px;
+ }
+
+.s1{
+   color: red;
+}
+
+.s2{
+   color: #07DFCD;
+}
+
+.s3{
+   color: #0FED5D;
+}
+p{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+img{
+   height: 80%;
+   width: 100%;
+}
+
+/* #btn{
+   margin-top: 40px;
+   height: 40px;
+   width: 40%;
+   margin-left: 30%;
+   border-radius: 10px;
+   font-size: 20px;
+   color: black;
+   background: repeating-radial-gradient(#05FFEA, #05FF44,#FF0591);
+}
+ */
+#aiVoiceGif{
+   height: 120px;
+   width: 90%;
+}
+
+/* J A R V I S Jump Animation */
+h1 span{
+  display: flex;
+  justify-content: center;
+  color: cyan;
+  font-size: 80px;
+  letter-spacing: 10px;
+  text-shadow: 0 0 15px cyan;
+  animation: jump 1.6s infinite;
+}
+
+/* Apply animation to each letter */
+
+/* Delay each letter */
+h1 span:nth-child(1) { animation-delay: 0s; }
+h1 span:nth-child(2) { animation-delay: 0.1s; }
+h1 span:nth-child(3) { animation-delay: 0.2s; }
+h1 span:nth-child(4) { animation-delay: 0.3s; }
+h1 span:nth-child(5) { animation-delay: 0.4s; }
+h1 span:nth-child(6) { animation-delay: 0.5s; }
+
+/* Jump Keyframes */
+@keyframes jump {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-8px);
+    }
+}
+
+
+/* Left to Right Sliding Animation for p Tag */
+.pra {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  color: #860DED;
+  white-space: nowrap;
+  animation: blink 0.2s infinite;
+}
+
+/* Blink Animation */
+@keyframes blink {
+    0%, 100% {
+        opacity: 7;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Button container */
+.btn {
+  background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 15px 40px;
+  margin-top: 20px;
+  border-radius: 50px;
+  margin-left: 32%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.3s ease;
+  z-index: 1;
+  animation: pulse 1.5s infinite;
+}
+
+/* Glowing animation on hover */
+.btn:hover {
+  background: linear-gradient(145deg, #ff00ff, #00ffff);
+  color: #000;
+  box-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff, 0 0 60px #ff00ff;
+  transform: scale(1.05);
+}
+
+/* Click animation */
+.btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 30px #00ff00, 0 0 50px #ff0000;
+}
+
+/* Background Colorful Animation */
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #ff0000, #ff7300, #ffeb00, #47ff00, #00ffee, #2b65ff, #8000ff, #ff00ff);
+  background-size: 300%;
+  z-index: -1;
+  transition: 0.3s ease;
+  border-radius: 50px;
+  animation: rainbow 3s linear infinite;
+  filter: blur(8px);
+}
+
+/* Rainbow Background Animation */
+@keyframes rainbow {
+  0% { background-position: 0%; }
+  50% { background-position: 100%; }
+  100% { background-position: 0%; }
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% { box-shadow: 0 0 15px rgba(255, 0, 255, 0.7); }
+  50% { box-shadow: 0 0 25px rgba(0, 255, 255, 0.7); }
+  100% { box-shadow: 0 0 15px rgba(255, 0, 255, 0.7); }
+}
+
+/* Jarvis Animated Title */
+p span {
+   font-size: 20px;
+   font-weight: bold;
+   display: inline-block;
+   color: #08FF70;
+   animation: colorChange 3s infinite;
+}
+
+/* Animation for Title Colors */
+@keyframes colorChange {
+   0% { color: #00ffcc; }
+   25% { color: #ff00ff; }
+   50% { color: #ffcc00; }
+   75% { color: #00ccff; }
+   100% { color: #00ffcc; }
+}
+
+.img1{
+   height: 680px;
+   filter: hue-rotate(180deg); /* Color change */
+}
+
+/* ====== Listening Text Animation ====== */
+#output {
+   margin-top: 20px; /* बटन से थोड़ा नीचे */
+   font-size: 1.5rem;
+   color: #00ffcc;
+   text-align: center;
+   animation: blinkFade 1.5s infinite alternate;
+   font-weight: bold;
+   letter-spacing: 2px;
+}
+
+/* ====== Blinking and Fading Animation ====== */
+@keyframes blinkFade {
+   0% {
+      opacity: 0.2;
+      transform: scale(1);
+   }
+   50% {
+      opacity: 1;
+      transform: scale(1.1);
+   }
+   100% {
+      opacity: 0.2;
+      transform: scale(1);
+   }
+}
+
+/* ====== Image Animation ====== */
+.img {
+   display: block;
+   margin: 20px auto;
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+   border: 5px solid transparent;
+   animation: colorPulse 3s infinite, rotateZoom 6s infinite;
+   box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+}
+
+/* ====== Color Pulsing Animation ====== */
+@keyframes colorPulse {
+   0% {
+      border-color: #ff0000;
+      box-shadow: 0 0 15px #ff0000;
+   }
+   25% {
+      border-color: #00ff00;
+      box-shadow: 0 0 15px #00ff00;
+   }
+   50% {
+      border-color: #0000ff;
+      box-shadow: 0 0 15px #0000ff;
+   }
+   75% {
+      border-color: #ffff00;
+      box-shadow: 0 0 15px #ffff00;
+   }
+   100% {
+      border-color: #ff00ff;
+      box-shadow: 0 0 15px #ff00ff;
+   }
+}
+
+/* ====== Rotate and Zoom Animation ====== */
+@keyframes rotateZoom {
+   0%, 100% {
+      transform: scale(1) rotate(0deg);
+   }
+   50% {
+      transform: scale(1.1) rotate(10deg);
+   }
+}
